@@ -1,13 +1,108 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*{
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #22254B;
+  width: 100%;
+  min-height: 100vh;
+}
+.movie{
+  margin:1rem;
+  width: 300px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+  background-color: #373B69;
+  position: relative;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  
+}
+.movie img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  
+}
+.movies-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.movie-info{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.movie-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.movie-info span{
+  
+  background-color: #22254B;
+  padding: 8px;
+}
+.overview{
+  color: black;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left:0;
+  background-color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out ;
+  padding: 15px;
+  overflow: auto;
+  max-height: 100%;
+}
+.movie:hover .overview {
+  transform: translateY(0);
+}
+header{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  background-color: #373B69;
+  
+}
+.search {
+  border:2px solid black;
+  background-color: inherit;
+  border-radius: 50px;
+  padding: 15px 5px;
+  width: 350px;
+  font-size: 16px;
+  color: white;
+}
+.search::placeholder{
+  color: #9b9af7;
+  font-size: 17px;
+}
+.search:focus{
+  outline:none;
+  background-color: #22254B;
+}
+.tag.red{
+  color: red;
+}
+.tag.green{
+  color: rgb(6, 235, 6);
+}
+.tag.orange {
+  color: orange;
+}
+.tag {
+  background-color: #22254b;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-weight: bold;
 }
